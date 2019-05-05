@@ -1,0 +1,6 @@
+<resources>
+    <string name="transactions_title">All the transactions</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>
