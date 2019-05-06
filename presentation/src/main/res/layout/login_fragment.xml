@@ -10,40 +10,43 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/margin_padding_xxlarge"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/margin_padding_xxlarge"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin" android:background="#9BD8DF">
 
         <EditText
-            android:id="@+id/loginUsuario"
-            style="@style/EditTextStyleDefault"
-            android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:hint="@string/label_usuario"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/loginUsuario"
+                style="@style/EditTextStyleDefault"
+                android:layout_width="match_parent"
+                android:layout_marginTop="240dp"
+                android:hint="@string/label_usuario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                android:text="Usuário"/>
 
         <EditText
-            android:id="@+id/loginSenha"
-            style="@style/EditTextStyleDefault"
-            android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:hint="@string/label_senha"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginUsuario" />
+                android:id="@+id/loginSenha"
+                style="@style/EditTextStyleDefault"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:hint="@string/label_senha"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loginUsuario" app:layout_constraintHorizontal_bias="1.0"
+                android:text="Senha"/>
 
         <Button
                 style="@style/ButtonStyle"
                 android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginTop="76dp"
                 android:text="Login"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/loginSenha"/>
+                app:layout_constraintTop_toBottomOf="@id/loginSenha" app:layout_constraintHorizontal_bias="0.0"
+                android:background="#5164D8" android:textColor="#FFFFFF"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
