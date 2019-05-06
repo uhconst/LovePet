@@ -3,4 +3,9 @@
 
     <string name="yes">Yes</string>
     <string name="no">No</string>
+
+    <!-- LOGIN -->
+    <string name="label_usuario">Usuário</string>
+    <string name="label_senha">Senha</string>
+    <string name="label_login">Login</string>
 </resources>
