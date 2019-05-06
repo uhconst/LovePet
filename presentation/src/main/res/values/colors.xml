@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#377C3A</color>
-    <color name="colorAccent">#FFFFFF</color>
-    <color name="windowBackground">#EEEEEE</color>
+    <color name="colorPrimary">#187F8B</color>
+    <color name="colorAccent">#072930</color>
 
-    <color name="yellow">#E9D51A</color>
-    <color name="grey">#AAAAAA</color>
+    <color name="white">#FFF</color>
+
+    <!-- 50ty shades of grey -->
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_200">#E8E8E8</color>
+    <color name="grey_300">#DCDCDC</color>
+    <color name="grey_400">#D3D3D3</color>
+    <color name="grey_500">#C0C0C0</color>
+    <color name="grey_600">#A9A9A9</color>
+    <color name="grey_700">#808080</color>
+    <color name="grey_800">#696969</color>
+
+    <color name="inactive_color">@color/grey_600</color>
+
+    <!-- Text -->
+    <color name="text_default_color">#252525</color>
+    <color name="text_inactive_color">@color/inactive_color</color>
+    <color name="text_hint_color">@color/colorPrimary</color>
+
+    <!-- Edit text -->
+    <color name="edt_text_background">@color/grey_100</color>
+    <color name="edt_border_color">@color/grey_300</color>
+
+    <!-- Button -->
+    <color name="btn_color">@color/colorPrimary</color>
+    <color name="btn_color_pressed">@color/colorAccent</color>
+    <color name="btn_inactive">@color/inactive_color</color>
+    <color name="btn_text_color">@color/white</color>
 
 </resources>
