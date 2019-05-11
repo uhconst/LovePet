@@ -50,6 +50,9 @@ dependencies {
 
     implementation dependencies.archLifecyle
 
+    implementation dependencies.navigationFragment
+    implementation dependencies.navigationUi
+
     implementation dependencies.koin
     implementation dependencies.koinViewModel
 
