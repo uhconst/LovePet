@@ -8,7 +8,7 @@ import org.koin.dsl.module
 val presentationModule = module {
 
     viewModel { MainViewModel() }
-    viewModel { LoginViewModel() }
+    viewModel { LoginViewModel(get()) }
 
 //    factory { TransactionRecyclerAdapter() }
 
