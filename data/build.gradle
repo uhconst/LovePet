@@ -46,6 +46,10 @@ dependencies {
     implementation dependencies.rxKotlin
     implementation dependencies.rxAndroid
 
+    implementation dependencies.firebaseCore
+    implementation dependencies.firebaseAuth
+    implementation dependencies.firebaseDatabase
+
     implementation dependencies.room
     implementation dependencies.rxRoom
     kapt dependencies.roomCompiler

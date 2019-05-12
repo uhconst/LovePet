@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'com.google.gms.google-services'
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
@@ -55,6 +57,10 @@ dependencies {
     implementation dependencies.room
     implementation dependencies.rxRoom
     kapt dependencies.roomCompiler
+
+    implementation dependencies.firebaseCore
+    implementation dependencies.firebaseAuth
+    implementation dependencies.firebaseDatabase
 
     implementation dependencies.koin
     implementation dependencies.koinViewModel
