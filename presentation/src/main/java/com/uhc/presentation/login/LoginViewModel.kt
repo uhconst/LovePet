@@ -1,15 +1,20 @@
 package com.uhc.presentation.login
 
-import com.uhc.domain.firebase.FirebaseRepo
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.uhc.domain.firebase.auth.FirebaseAuthService
+import com.uhc.domain.model.User
 import com.uhc.presentation.ui.base.BaseViewModel
 
 /**
  * Created by Constancio on 2019-05-04.
  */
-class LoginViewModel(val firebaseRepo: FirebaseRepo) : BaseViewModel() {
-
+class LoginViewModel(val firebaseAuth: FirebaseAuthService) : BaseViewModel() {
+    private val _user = MutableLiveData<User>()
+    val user: LiveData<User> get() = _user
 
     fun onLoginClick() {
-        firebaseRepo.writeNewUser("teste2", "456") //todo
+        firebaseAuth.login(user.value)
+//        firebaseRepo.writeNewUser("teste2", "456") //todo
     }
 }

@@ -1,16 +1,17 @@
-package com.uhc.data.firebase
+package com.uhc.data.firebase.database
 
 import com.google.firebase.database.FirebaseDatabase
-import com.uhc.domain.firebase.FirebaseRepo
-import com.uhc.domain.repository.User
+import com.uhc.domain.firebase.database.FirebaseDatabaseService
+import com.uhc.domain.model.User
 
 /**
  * Created by Constancio on 2019-05-12.
  */
-class FirebaseRepoImpl(
-    val fbDatabase: FirebaseDatabase
-) : FirebaseRepo {
+class FirebaseDatabaseServiceImpl(
+    private val fbDatabase: FirebaseDatabase
+) : FirebaseDatabaseService {
 
+    // todo just an example for saving something
     override fun writeNewUser(email: String, password: String) {
         val user = User(email, password) // todo
 
