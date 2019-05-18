@@ -1,7 +1,7 @@
 package com.uhc.presentation.ui.base
 
-import androidx.lifecycle.ViewModel
 import androidx.databinding.ObservableBoolean
+import androidx.lifecycle.ViewModel
 import com.uhc.domain.exception.DefaultException
 import io.reactivex.Completable
 import io.reactivex.Single
@@ -14,9 +14,17 @@ import io.reactivex.disposables.Disposable
  */
 abstract class BaseViewModel : ViewModel() {
 
-    val showLoading = ObservableBoolean()
-
     private val compositeDisposable = CompositeDisposable()
+
+    val isProgress = ObservableBoolean()
+
+    protected fun startProgress() {
+        isProgress.set(true)
+    }
+
+    protected fun stopProgress() {
+        isProgress.set(false)
+    }
 
     protected fun <T> subscribeSingle(
         observable: Single<T>,
