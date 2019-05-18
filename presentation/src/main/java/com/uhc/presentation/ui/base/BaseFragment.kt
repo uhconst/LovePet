@@ -7,6 +7,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import com.uhc.presentation.MainActivity
+import com.uhc.presentation.R
 import io.reactivex.disposables.CompositeDisposable
 
 /**
@@ -17,6 +21,10 @@ abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
     protected lateinit var binding: B
 
     protected val compositeDisposable = CompositeDisposable()
+
+    protected val mainActivity: MainActivity get() = (activity as MainActivity)
+
+    protected val navController: NavController? get() = activity?.findNavController(R.id.navHostMain)
 
     abstract fun getLayoutRes(): Int
 
