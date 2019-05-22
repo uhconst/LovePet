@@ -2,6 +2,7 @@ package com.uhc.presentation.login
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.uhc.presentation.R
 import com.uhc.presentation.databinding.LoginFragmentBinding
@@ -24,6 +25,11 @@ class LoginFragment : BaseFragment<LoginFragmentBinding>() {
         viewModel.events.observe(this, Observer { event ->
             when (event) {
                 LoginEvents.GO_TO_HOME -> navController?.navigate(LoginFragmentDirections.actionShowHomeFragment())
+                LoginEvents.LOGIN_ERROR -> Toast.makeText(
+                    context,
+                    getString(R.string.error_login),
+                    Toast.LENGTH_LONG
+                ).show()
             }
         })
     }
