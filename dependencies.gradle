@@ -24,6 +24,9 @@ ext {
 
     firebaseVersion = "16.0.1"
 
+    rxFirebaseAuthVersion = "16.1.0.0"
+    rxFirebaseAuthCore = "16.0.5.0"
+
     koinVersion = "2.0.0-rc-2"
 
     rxKotlinVersion = "2.3.0"
@@ -117,6 +120,9 @@ ext {
             firebaseCore          : "com.google.firebase:firebase-core:$firebaseVersion",
             firebaseAuth          : "com.google.firebase:firebase-auth:$firebaseVersion",
             firebaseDatabase      : "com.google.firebase:firebase-database:$firebaseVersion",
+            rxFirebaseAuthKotlin  : "com.androidhuman.rxfirebase2:firebase-auth-kotlin:$rxFirebaseAuthVersion",
+            rxFirebaseAuth        : "com.androidhuman.rxfirebase2:firebase-auth:$rxFirebaseAuthVersion",
+            rxFirebaseCore        : "com.androidhuman.rxfirebase2:firebase-core:$rxFirebaseAuthCore",
             rxKotlin              : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
             rxAndroid             : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
             retrofit              : "com.squareup.retrofit2:retrofit:$retrofitVersion",
