@@ -1,9 +1,12 @@
 package com.uhc.data.firebase.auth
 
 import android.util.Log
+import com.androidhuman.rxfirebase2.auth.rxSignInWithEmailAndPassword
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.uhc.domain.firebase.auth.FirebaseAuthService
-import io.reactivex.Completable
+import com.uhc.domain.model.LoginResponse
+import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
 
 /**
@@ -13,23 +16,16 @@ class FirebaseAuthServiceImpl(
     private val auth: FirebaseAuth
 ) : FirebaseAuthService {
 
-    override fun login(username: String, password: String): Completable =
-        Completable.create { emitter ->
-            auth.signInWithEmailAndPassword(username, password)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        // todo replace with a login wrapper (to be created)
-                        Log.d("Login", "signInWithEmail:success")
-                        emitter.onComplete()
-                    } else {
-                        // todo replace with a login wrapper (to be created)
-                        Log.w(
-                            "Login",
-                            "signInWithEmail:failure",
-                            task.exception
-                        )
-                        emitter.onError(Throwable("Error signInWithEmail:"))
-                    }
-                }
-        }.subscribeOn(Schedulers.io())
+    override fun login(username: String, password: String): Single<LoginResponse> =
+        auth.rxSignInWithEmailAndPassword(username, password)
+            .map {
+                it.toLoginResponse()
+            }
+            .doOnError {
+                Log.e("Login error", it.message) // todo log
+            }.subscribeOn(Schedulers.io())
+
+    private fun AuthResult.toLoginResponse(): LoginResponse =
+        LoginResponse(this.user.email.orEmpty())
+
 }
