@@ -1,6 +1,7 @@
 package com.uhc.presentation.login
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
@@ -30,6 +31,7 @@ class LoginFragment : BaseFragment<LoginFragmentBinding>() {
                     getString(R.string.error_login),
                     Toast.LENGTH_LONG
                 ).show()
+                else -> Log.d("Nav", "No event found.") // todo refactor logs
             }
         })
     }

@@ -19,5 +19,27 @@
             android:layout_gravity="center"
             android:text="HOME"
             android:textSize="50sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:onClickListener="@{() -> viewModel.onClientRegisterClick()}"
+            android:text="Cadastro cliente"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:onClickListener="@{() -> viewModel.onAnimalRegisterClick()}"
+            android:text="Cadastro animais"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:onClickListener="@{() -> viewModel.onAppointmentRegisterClick()}"
+            android:text="Cadastro agendamento"/>
+
     </LinearLayout>
 </layout>

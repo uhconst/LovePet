@@ -21,30 +21,42 @@
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/loginUsuario"
-                style="@style/EditTextStyleDefault"
+                style="@style/TextInputLayoutStyleDefault"
                 android:layout_width="match_parent"
                 android:layout_marginTop="@dimen/margin_padding_xxlarge"
-                android:enabled="@{!viewModel.isProgress}"
-                android:hint="@string/label_usuario"
-                android:text="@={viewModel.username}"
+                android:hint="@string/label_user"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <EditText
+                <EditText
+                    style="@style/EditTextStyleDefault"
+                    android:layout_width="match_parent"
+                    android:enabled="@{!viewModel.isProgress}"
+                    android:text="@={viewModel.username}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/loginSenha"
-                style="@style/EditTextStyleDefault"
+                style="@style/TextInputLayoutStyleDefault"
                 android:layout_width="match_parent"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:enabled="@{!viewModel.isProgress}"
-                android:hint="@string/label_senha"
-                android:inputType="textPassword"
-                android:text="@={viewModel.password}"
+                android:hint="@string/label_password"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/loginUsuario" />
+                app:layout_constraintTop_toBottomOf="@id/loginUsuario">
+
+                <EditText
+                    style="@style/EditTextStyleDefault"
+                    android:layout_width="match_parent"
+                    android:enabled="@{!viewModel.isProgress}"
+                    android:inputType="textPassword"
+                    android:text="@={viewModel.password}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 style="@style/ButtonStyle"

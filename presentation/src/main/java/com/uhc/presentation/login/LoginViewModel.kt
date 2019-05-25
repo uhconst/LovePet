@@ -3,8 +3,9 @@ package com.uhc.presentation.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.uhc.domain.firebase.auth.FirebaseAuthService
-import com.uhc.presentation.livedata.EventLiveData
+import com.uhc.presentation.BuildConfig
 import com.uhc.presentation.ui.base.BaseViewModel
+import com.uhc.presentation.utils.EventLiveData
 
 /**
  * Created by Constancio on 2019-05-04.
@@ -16,6 +17,13 @@ class LoginViewModel(val firebaseAuth: FirebaseAuthService) : BaseViewModel() {
 
     private val _events = EventLiveData<LoginEvents>()
     val events: LiveData<LoginEvents> get() = _events
+
+    init {
+        if (BuildConfig.DEBUG) {
+            username.value = "teste@teste.com"
+            password.value = "teste123"
+        }
+    }
 
     fun onLoginClick() {
         subscribeSingle(
