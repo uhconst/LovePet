@@ -1,8 +1,10 @@
 <resources>
     <string name="transactions_title">All the transactions</string>
 
+    <!-- COMMON -->
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="in_process">In process…</string>
 
     <!-- LOGIN -->
     <string name="label_user">Usuário</string>
