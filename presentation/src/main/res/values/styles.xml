@@ -1,5 +1,12 @@
 <resources>
 
+    <!-- Text Input Layout -->
+    <style name="TextInputLayoutStyleDefault" parent="Widget.Design.TextInputLayout">
+        <item name="android:gravity">bottom</item>
+        <item name="android:layout_height">@dimen/til_height_default</item>
+    </style>
+
+    <!-- Edit Text -->
     <style name="EditTextStyleDefault" parent="Widget.AppCompat.EditText">
         <item name="android:background">@drawable/shape_edt_text</item>
         <item name="android:layout_height">@dimen/edt_height_default</item>
@@ -10,6 +17,7 @@
         <item name="android:textCursorDrawable">@null</item>
     </style>
 
+    <!-- Button -->
     <style name="ButtonStyle" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:layout_height">@dimen/btn_height_default</item>
         <item name="android:background">@drawable/shape_btn</item>
