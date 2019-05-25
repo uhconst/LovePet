@@ -1,4 +1,4 @@
-package com.uhc.presentation.livedata
+package com.uhc.presentation.utils
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
