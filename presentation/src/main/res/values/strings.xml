@@ -5,8 +5,12 @@
     <string name="no">No</string>
 
     <!-- LOGIN -->
-    <string name="label_usuario">Usuário</string>
-    <string name="label_senha">Senha</string>
+    <string name="label_user">Usuário</string>
+    <string name="label_password">Senha</string>
     <string name="label_login">Login</string>
     <string name="error_login">Erro ao realizar o login. Verefique os dados e tente novamente.</string>
+
+    <!-- CLIENT REGISTER -->
+    <string name="label_name">Nome</string>
+    <string name="label_cpf">CPF</string>
 </resources>
