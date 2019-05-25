@@ -1,7 +1,9 @@
 package com.uhc.presentation.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import androidx.lifecycle.Observer
 import com.uhc.presentation.R
 import com.uhc.presentation.databinding.HomeFragmentBinding
 import com.uhc.presentation.ui.base.BaseFragment
@@ -20,5 +22,11 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>() {
 
         binding.viewModel = viewModel
 
+        viewModel.events.observe(this, Observer { event ->
+            when (event) {
+                HomeEvents.CLIENT_REGISTER -> navController?.navigate(HomeFragmentDirections.actionShowClientRegisterFragment())
+                else -> Log.d("Nav", "No event found.") // todo refactor logs
+            }
+        })
     }
 }
