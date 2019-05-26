@@ -13,6 +13,15 @@
     <string name="error_login">Erro ao realizar o login. Verefique os dados e tente novamente.</string>
 
     <!-- CLIENT REGISTER -->
-    <string name="label_name">Nome</string>
+    <string name="label_dados_cliente">Dados cliente</string>
+    <string name="label_dados_endereco">Dados endereço</string>
+    <string name="label_nome">Nome</string>
     <string name="label_cpf">CPF</string>
+    <string name="label_email">Email</string>
+    <string name="label_telefone_1">Telefone 1</string>
+    <string name="label_telefone_2">Telefone 2</string>
+    <string name="label_rua">Rua</string>
+    <string name="label_numero">Numero</string>
+    <string name="label_bairro">Bairro</string>
+    <string name="label_cep">Cep</string>
 </resources>

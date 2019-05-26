@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -21,17 +22,15 @@
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Cadastro cliente"
-                android:textSize="50sp" />
+            <include
+                layout="@layout/section_layout"
+                app:title="@{@string/label_dados_cliente}" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/TextInputLayoutStyleDefault"
                 android:layout_width="match_parent"
-                android:hint="@string/label_name">
+                android:layout_marginTop="@dimen/margin_padding_xtiny"
+                android:hint="@string/label_nome">
 
                 <EditText
                     style="@style/EditTextStyleDefault"
@@ -54,6 +53,120 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyleDefault"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/label_email">
+
+                <EditText
+                    style="@style/EditTextStyleDefault"
+                    android:layout_width="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyleDefault"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="@string/label_telefone_1">
+
+                <EditText
+                    style="@style/EditTextStyleDefault"
+                    android:layout_width="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyleDefault"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:hint="@string/label_telefone_2">
+
+                <EditText
+                    style="@style/EditTextStyleDefault"
+                    android:layout_width="match_parent"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <include
+                layout="@layout/section_layout"
+                app:title="@{@string/label_dados_endereco}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padding_xtiny"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyleDefault"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_weight="3"
+                    android:hint="@string/label_rua">
+
+                    <EditText
+                        style="@style/EditTextStyleDefault"
+                        android:layout_width="match_parent"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyleDefault"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/label_numero">
+
+                    <EditText
+                        style="@style/EditTextStyleDefault"
+                        android:layout_width="match_parent"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyleDefault"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_weight="3"
+                    android:hint="@string/label_bairro">
+
+                    <EditText
+                        style="@style/EditTextStyleDefault"
+                        android:layout_width="match_parent"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyleDefault"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:hint="@string/label_cep">
+
+                    <EditText
+                        style="@style/EditTextStyleDefault"
+                        android:layout_width="match_parent"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </layout>
