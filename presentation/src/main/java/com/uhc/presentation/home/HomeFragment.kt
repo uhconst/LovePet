@@ -7,6 +7,7 @@ import androidx.lifecycle.Observer
 import com.uhc.presentation.R
 import com.uhc.presentation.databinding.HomeFragmentBinding
 import com.uhc.presentation.ui.base.BaseFragment
+import kotlinx.android.synthetic.main.home_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 /**
@@ -32,5 +33,7 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>() {
                 ).show()
             }
         })
+
+        setupToobar(toolbar, false)
     }
 }
