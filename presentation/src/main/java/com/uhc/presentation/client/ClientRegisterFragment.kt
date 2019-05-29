@@ -5,6 +5,7 @@ import android.view.View
 import com.uhc.presentation.R
 import com.uhc.presentation.databinding.ClientRegisterFragmentBinding
 import com.uhc.presentation.ui.base.BaseFragment
+import kotlinx.android.synthetic.main.client_register_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 /**
@@ -20,5 +21,6 @@ class ClientRegisterFragment : BaseFragment<ClientRegisterFragmentBinding>() {
 
         binding.viewModel = viewModel
 
+        setupToobar(toolbar)
     }
 }
