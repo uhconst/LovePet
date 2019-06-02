@@ -5,6 +5,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="in_process">In process…</string>
+    <string name="label_save">Salvar</string>
 
     <!-- LOGIN -->
     <string name="label_user">Usuário</string>
