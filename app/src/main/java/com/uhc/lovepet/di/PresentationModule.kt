@@ -19,6 +19,6 @@ val presentationModule = module {
     viewModel { HomeViewModel() }
 
     /** Client Register */
-    viewModel { ClientRegisterViewModel() }
+    viewModel { ClientRegisterViewModel(get()) }
 
 }
