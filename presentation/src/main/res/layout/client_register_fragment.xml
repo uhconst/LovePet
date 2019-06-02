@@ -70,7 +70,8 @@
                     <EditText
                         style="@style/EditTextStyleDefault"
                         android:layout_width="match_parent"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:text="@={viewModel.cpf}" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,7 +84,8 @@
                     <EditText
                         style="@style/EditTextStyleDefault"
                         android:layout_width="match_parent"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:text="@={viewModel.email}" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,7 +98,8 @@
                     <EditText
                         style="@style/EditTextStyleDefault"
                         android:layout_width="match_parent"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:text="@={viewModel.telefone1}" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,7 +113,8 @@
                     <EditText
                         style="@style/EditTextStyleDefault"
                         android:layout_width="match_parent"
-                        android:inputType="text" />
+                        android:inputType="text"
+                        android:text="@={viewModel.telefone2}" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,7 +138,8 @@
                         <EditText
                             style="@style/EditTextStyleDefault"
                             android:layout_width="match_parent"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:text="@={viewModel.rua}" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -147,7 +152,8 @@
                         <EditText
                             style="@style/EditTextStyleDefault"
                             android:layout_width="match_parent"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:text="@={viewModel.numero}" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -170,7 +176,8 @@
                         <EditText
                             style="@style/EditTextStyleDefault"
                             android:layout_width="match_parent"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:text="@={viewModel.bairro}" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -183,11 +190,21 @@
                         <EditText
                             style="@style/EditTextStyleDefault"
                             android:layout_width="match_parent"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:text="@={viewModel.cep}" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
+
+                <Button
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:enabled="@{!viewModel.isProgress}"
+                    android:onClick="@{() -> viewModel.onSaveClick()}"
+                    android:text="@string/label_save" />
+
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
