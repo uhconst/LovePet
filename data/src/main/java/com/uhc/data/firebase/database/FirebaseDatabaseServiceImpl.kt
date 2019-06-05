@@ -15,6 +15,7 @@ class FirebaseDatabaseServiceImpl(
         fbDatabase
             .reference
             .child("client")
+            .push()
             .setValue(client)
     }
 }
