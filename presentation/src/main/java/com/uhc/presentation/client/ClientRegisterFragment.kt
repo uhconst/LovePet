@@ -1,7 +1,9 @@
 package com.uhc.presentation.client
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import androidx.lifecycle.Observer
 import com.uhc.presentation.R
 import com.uhc.presentation.databinding.ClientRegisterFragmentBinding
 import com.uhc.presentation.ui.base.BaseFragment
@@ -22,5 +24,12 @@ class ClientRegisterFragment : BaseFragment<ClientRegisterFragmentBinding>() {
         binding.viewModel = viewModel
 
         setupToobar(toolbar)
+
+        viewModel.event.observe(this, Observer { event ->
+            when (event) {
+                ClientRegisterEvent.GO_BACK -> onBackPressed()
+                else -> Log.d("Nav", "No event found.") // todo refactor logs
+            }
+        })
     }
 }

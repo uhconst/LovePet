@@ -1,15 +1,17 @@
 package com.uhc.presentation.client
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.uhc.domain.firebase.database.FirebaseDatabaseService
 import com.uhc.domain.model.Client
 import com.uhc.presentation.ui.base.BaseViewModel
+import com.uhc.presentation.utils.EventLiveData
 
 /**
  * Created by Constancio on 2019-05-25.
  */
 class ClientRegisterViewModel(
-    val firebaseDatabaseService: FirebaseDatabaseService
+    private val firebaseDatabaseService: FirebaseDatabaseService
 ) : BaseViewModel() {
 
     val name = MutableLiveData<String>()
@@ -22,9 +24,12 @@ class ClientRegisterViewModel(
     val bairro = MutableLiveData<String>()
     val cep = MutableLiveData<String>()
 
+    private val _event = EventLiveData<ClientRegisterEvent>()
+    val event: LiveData<ClientRegisterEvent> get() = _event
+
     fun onSaveClick() {
         firebaseDatabaseService.writeNewClient(getClient())
-
+        _event.postValue(ClientRegisterEvent.GO_BACK)
     }
 
     private fun getClient(): Client = Client(
@@ -38,4 +43,8 @@ class ClientRegisterViewModel(
         bairro = bairro.value.orEmpty(),
         cep = cep.value.orEmpty()
     )
+}
+
+enum class ClientRegisterEvent {
+    GO_BACK
 }
