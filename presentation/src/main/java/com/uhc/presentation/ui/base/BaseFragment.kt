@@ -37,4 +37,8 @@ abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
     protected fun setupToobar(toolbar: Toolbar, enableBackButton: Boolean = true) {
         mainActivity.setupTollbar(toolbar, enableBackButton)
     }
+
+    protected fun onBackPressed() {
+        mainActivity.onBackPressed()
+    }
 }
