@@ -28,7 +28,7 @@ ext {
     rxFirebaseDatabaseVersion = "16.0.3.0"
     rxFirebaseAuthCore = "16.0.5.0"
 
-    koinVersion = "2.0.0-rc-2"
+    koinVersion = "2.0.0"
 
     rxKotlinVersion = "2.3.0"
     rxAndroidVersion = "2.1.1"
