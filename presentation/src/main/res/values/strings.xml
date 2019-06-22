@@ -18,6 +18,7 @@
 
     <!-- CLIENT REGISTER -->
     <string name="label_cadastro_cliente">Cadastro de Cliente</string>
+    <string name="label_list_cliente">Listagem de Cliente</string>
     <string name="label_dados_cliente">Dados cliente</string>
     <string name="label_dados_endereco">Dados endereço</string>
     <string name="label_nome">Nome</string>

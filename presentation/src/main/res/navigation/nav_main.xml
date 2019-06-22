@@ -25,11 +25,19 @@
         android:id="@+id/homeFragment"
         android:name="com.uhc.presentation.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/home_fragment" >
+        tools:layout="@layout/home_fragment">
 
         <action
             android:id="@+id/actionShowClientRegisterFragment"
             app:destination="@+id/clientRegisterFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+
+        <action
+            android:id="@+id/actionShowClientListFragment"
+            app:destination="@+id/clientListFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_enter_anim"
@@ -43,5 +51,10 @@
         android:label="ClientRegisterFragment"
         tools:layout="@layout/client_register_fragment" />
 
+    <fragment
+        android:id="@+id/clientListFragment"
+        android:name="com.uhc.presentation.client.ClientListFragment"
+        android:label="ClientListFragment"
+        tools:layout="@layout/client_list_fragment" />
 
 </navigation>

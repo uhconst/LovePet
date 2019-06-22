@@ -26,6 +26,7 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>() {
         viewModel.events.observe(this, Observer { event ->
             when (event) {
                 HomeEvents.CLIENT_REGISTER -> navController?.navigate(HomeFragmentDirections.actionShowClientRegisterFragment())
+                HomeEvents.CLIENT_LIST -> navController?.navigate(HomeFragmentDirections.actionShowClientListFragment())
                 else -> Toast.makeText(
                     context,
                     getString(R.string.in_process),
