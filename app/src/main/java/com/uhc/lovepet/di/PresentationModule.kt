@@ -1,6 +1,7 @@
 package com.uhc.lovepet.di
 
 import com.uhc.presentation.MainViewModel
+import com.uhc.presentation.client.ClientListViewModel
 import com.uhc.presentation.client.ClientRegisterViewModel
 import com.uhc.presentation.home.HomeViewModel
 import com.uhc.presentation.login.LoginViewModel
@@ -21,4 +22,6 @@ val presentationModule = module {
     /** Client Register */
     viewModel { ClientRegisterViewModel(get()) }
 
+    /** Client List */
+    viewModel { ClientListViewModel(get()) }
 }
