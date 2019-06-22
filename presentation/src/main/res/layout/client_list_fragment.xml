@@ -4,21 +4,17 @@
 
     <data>
 
-        <!--<variable-->
-            <!--name="vm"-->
-            <!--type="com.uhc.presentation.transaction.TransactionListViewModel" />-->
+        <variable
+            name="viewModel"
+            type="com.uhc.presentation.client.ClientListViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/app_bar"
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -28,26 +24,24 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
-                app:title="@string/transactions_title"
-                app:titleTextColor="@color/colorAccent" />
+                app:title="@string/label_list_cliente" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-            android:id="@+id/refresh"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <!--app:onRefreshListener="@{() -> vm.fetchTransactions()}"-->
-            <!--app:refreshing="@{vm.showLoading}">-->
-            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_transactions"
+                android:id="@+id/rvClients"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 </layout>
