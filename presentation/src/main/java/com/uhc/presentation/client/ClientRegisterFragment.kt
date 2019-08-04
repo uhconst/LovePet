@@ -28,6 +28,7 @@ class ClientRegisterFragment : BaseFragment<ClientRegisterFragmentBinding>() {
         viewModel.event.observe(this, Observer { event ->
             when (event) {
                 ClientRegisterEvent.GO_BACK -> onBackPressed()
+                ClientRegisterEvent.ERROR -> Log.e("Error saving", "Error saving client.") // todo refactor logs
                 else -> Log.d("Nav", "No event found.") // todo refactor logs
             }
         })

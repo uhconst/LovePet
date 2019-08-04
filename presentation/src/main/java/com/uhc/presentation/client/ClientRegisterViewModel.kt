@@ -28,8 +28,11 @@ class ClientRegisterViewModel(
     val event: LiveData<ClientRegisterEvent> get() = _event
 
     fun onSaveClick() {
-        clientsUseCase.saveClient(getClient())
-        _event.postValue(ClientRegisterEvent.GO_BACK)
+        subscribeCompletable(
+            observable = clientsUseCase.saveClient(getClient()),
+            complete = { _event.postValue(ClientRegisterEvent.GO_BACK) },
+            error = { _event.postValue(ClientRegisterEvent.ERROR) }
+        )
     }
 
     private fun getClient(): Client = Client(
@@ -46,5 +49,6 @@ class ClientRegisterViewModel(
 }
 
 enum class ClientRegisterEvent {
-    GO_BACK
+    GO_BACK,
+    ERROR
 }
