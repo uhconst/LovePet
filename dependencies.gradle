@@ -38,6 +38,8 @@ ext {
 
     picassoVersion = "2.71828"
 
+    stethoVersion = "1.5.1"
+
     junitVersion = "4.12"
     runnerVersion = "1.1.0"
     espressoVersion = "3.1.0"
@@ -65,7 +67,9 @@ ext {
             room                  : "androidx.room:room-runtime:$archVersion",
             rxRoom                : "androidx.room:room-rxjava2:$archVersion",
             roomCompiler          : "androidx.room:room-compiler:$archVersion",
-            picasso               : "com.squareup.picasso:picasso:$picassoVersion"
+            picasso               : "com.squareup.picasso:picasso:$picassoVersion",
+            stetho                :"com.facebook.stetho:stetho:$stethoVersion",
+            stethoOkHttp          :"com.facebook.stetho:stetho-okhttp3:$stethoVersion"
     ]
 
     appTestDependencies = [
