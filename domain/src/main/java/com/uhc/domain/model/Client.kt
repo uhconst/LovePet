@@ -4,13 +4,14 @@ package com.uhc.domain.model
  * Created by Constancio on 2019-06-02.
  */
 data class Client (
+    val id: Long? = null,
     val name: String,
-    val cpf: String,
+    val doc: String,
     val email: String,
-    val telefone1: String,
-    val telefone2: String,
-    val rua: String,
-    val numero: String,
-    val bairro: String,
-    val cep: String
+    val phone1: String,
+    val phone2: String,
+    val street: String,
+    val number: String,
+    val district: String,
+    val postCode: String
 )

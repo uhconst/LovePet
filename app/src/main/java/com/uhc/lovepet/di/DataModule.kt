@@ -11,7 +11,7 @@ val dataModule = module {
 
     single { AppDatabase.createDatabase(androidApplication()) }
 
-    single { get<AppDatabase>().transactionDao() }
+    single { get<AppDatabase>().clientDao() }
 
     single { TransactionService.createTransactionService() }
 
