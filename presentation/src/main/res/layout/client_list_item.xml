@@ -18,14 +18,53 @@
         app:cardCornerRadius="@dimen/card_radius"
         app:cardElevation="@dimen/card_elevation">
 
-        <TextView
-            android:id="@+id/tv_name"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/activity_vertical_margin"
-            android:gravity="center"
-            android:text="@{client.name}"
-            tools:text="Link Hyrule" />
+            android:layout_margin="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{client.name}"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Link" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{client.address}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                tools:text="Hyrule, 42 - Nintendo" />
+
+            <TextView
+                android:id="@+id/tv_phone1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{client.phone1}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_address"
+                tools:text="(17) 3533-1234" />
+
+            <TextView
+                android:id="@+id/tv_phone2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{client.phone2}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_phone1"
+                tools:text="(17) 99715-7419" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 </layout>
