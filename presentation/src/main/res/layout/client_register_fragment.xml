@@ -96,9 +96,11 @@
                     android:hint="@string/label_telefone_1">
 
                     <EditText
+                        android:id="@+id/clientRegisterPhone1"
                         style="@style/EditTextStyleDefault"
                         android:layout_width="match_parent"
-                        android:inputType="text"
+                        android:inputType="phone"
+                        android:maxLength="13"
                         android:text="@={viewModel.phone1}" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -111,9 +113,11 @@
                     android:hint="@string/label_telefone_2">
 
                     <EditText
+                        android:id="@+id/clientRegisterPhone2"
                         style="@style/EditTextStyleDefault"
                         android:layout_width="match_parent"
-                        android:inputType="text"
+                        android:inputType="phone"
+                        android:maxLength="13"
                         android:text="@={viewModel.phone2}" />
 
                 </com.google.android.material.textfield.TextInputLayout>
