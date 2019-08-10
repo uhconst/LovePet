@@ -99,7 +99,7 @@
                         style="@style/EditTextStyleDefault"
                         android:layout_width="match_parent"
                         android:inputType="text"
-                        android:text="@={viewModel.telefone1}" />
+                        android:text="@={viewModel.phone1}" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,7 +114,7 @@
                         style="@style/EditTextStyleDefault"
                         android:layout_width="match_parent"
                         android:inputType="text"
-                        android:text="@={viewModel.telefone2}" />
+                        android:text="@={viewModel.phone2}" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -139,7 +139,7 @@
                             style="@style/EditTextStyleDefault"
                             android:layout_width="match_parent"
                             android:inputType="text"
-                            android:text="@={viewModel.rua}" />
+                            android:text="@={viewModel.street}" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -153,7 +153,7 @@
                             style="@style/EditTextStyleDefault"
                             android:layout_width="match_parent"
                             android:inputType="text"
-                            android:text="@={viewModel.numero}" />
+                            android:text="@={viewModel.number}" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -177,7 +177,7 @@
                             style="@style/EditTextStyleDefault"
                             android:layout_width="match_parent"
                             android:inputType="text"
-                            android:text="@={viewModel.bairro}" />
+                            android:text="@={viewModel.district}" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -191,7 +191,7 @@
                             style="@style/EditTextStyleDefault"
                             android:layout_width="match_parent"
                             android:inputType="text"
-                            android:text="@={viewModel.cep}" />
+                            android:text="@={viewModel.postalCode}" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 

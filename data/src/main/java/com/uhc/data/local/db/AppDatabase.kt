@@ -5,10 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.uhc.data.R
-import com.uhc.data.local.db.transaction.TransactionDao
-import com.uhc.data.local.db.transaction.TransactionEntity
+import com.uhc.data.local.db.client.ClientDao
+import com.uhc.data.local.db.client.ClientEntity
 
-@Database(entities = [TransactionEntity::class], version = 1)
+@Database(entities = [ClientEntity::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
     companion object {
@@ -21,5 +21,5 @@ abstract class AppDatabase : RoomDatabase() {
         }
     }
 
-    abstract fun transactionDao(): TransactionDao
+    abstract fun clientDao(): ClientDao
 }

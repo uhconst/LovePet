@@ -73,6 +73,9 @@ dependencies {
 
     implementation dependencies.picasso
 
+    implementation dependencies.stetho
+    implementation dependencies.stethoOkHttp
+
     implementation dependencies.rxKotlin
     implementation dependencies.rxAndroid
 
