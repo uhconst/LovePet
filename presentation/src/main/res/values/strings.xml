@@ -17,17 +17,21 @@
     <string name="label_home">Home</string>
 
     <!-- CLIENT REGISTER -->
-    <string name="label_cadastro_cliente">Cadastro de Cliente</string>
-    <string name="label_list_cliente">Listagem de Cliente</string>
-    <string name="label_dados_cliente">Dados cliente</string>
-    <string name="label_dados_endereco">Dados endereço</string>
-    <string name="label_nome">Nome</string>
-    <string name="label_cpf">CPF</string>
+    <string name="label_client_register">Cadastro de Cliente</string>
+    <string name="label_client_list">Listagem de Cliente</string>
+    <string name="label_client_info">Dados cliente</string>
+    <string name="label_address_info">Dados endereço</string>
+    <string name="label_name">Nome</string>
+    <string name="label_doc">CPF</string>
     <string name="label_email">Email</string>
-    <string name="label_telefone_1">Telefone 1</string>
-    <string name="label_telefone_2">Telefone 2</string>
-    <string name="label_rua">Rua</string>
-    <string name="label_numero">Numero</string>
-    <string name="label_bairro">Bairro</string>
-    <string name="label_cep">Cep</string>
+    <string name="label_phone_1">Telefone 1</string>
+    <string name="label_phone_2">Telefone 2</string>
+    <string name="label_street">Rua</string>
+    <string name="label_number">Numero</string>
+    <string name="label_district">Bairro</string>
+    <string name="label_postal_code">Cep</string>
+
+    <!-- PET REGISTER -->
+    <string name="label_pet_info">Dados pet</string>
+    <string name="label_pet_register">Cadastro do Pet</string>
 </resources>

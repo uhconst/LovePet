@@ -12,6 +12,8 @@ val dataModule = module {
 
     single { get<AppDatabase>().clientDao() }
 
+    single { get<AppDatabase>().petDao() }
+
     single { FirebaseAuth.getInstance()}
 
     single { FirebaseDatabase.getInstance()}

@@ -6,6 +6,7 @@ import com.uhc.presentation.client.ClientListViewModel
 import com.uhc.presentation.client.ClientRegisterViewModel
 import com.uhc.presentation.home.HomeViewModel
 import com.uhc.presentation.login.LoginViewModel
+import com.uhc.presentation.pet.PetRegisterViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -25,6 +26,9 @@ val presentationModule = module {
 
     /** Client List */
     viewModel { ClientListViewModel(get()) }
+
+    /** Pet Register */
+    viewModel { PetRegisterViewModel(get()) }
 
     /** Client Adapter */
     factory { ClientAdapter() }
