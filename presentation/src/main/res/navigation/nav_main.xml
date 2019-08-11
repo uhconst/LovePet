@@ -43,6 +43,14 @@
             app:popEnterAnim="@anim/nav_default_enter_anim"
             app:popExitAnim="@anim/nav_default_exit_anim" />
 
+        <action
+            android:id="@+id/actionShowPetRegisterFragment"
+            app:destination="@+id/petRegisterFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim" />
+
     </fragment>
 
     <fragment
@@ -56,5 +64,11 @@
         android:name="com.uhc.presentation.client.ClientListFragment"
         android:label="ClientListFragment"
         tools:layout="@layout/client_list_fragment" />
+
+    <fragment
+        android:id="@+id/petRegisterFragment"
+        android:name="com.uhc.presentation.pet.PetRegisterFragment"
+        android:label="PetRegisterFragment"
+        tools:layout="@layout/pet_register_fragment" />
 
 </navigation>

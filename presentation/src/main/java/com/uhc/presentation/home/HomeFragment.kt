@@ -27,6 +27,7 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>() {
             when (event) {
                 HomeEvents.CLIENT_REGISTER -> navController?.navigate(HomeFragmentDirections.actionShowClientRegisterFragment())
                 HomeEvents.CLIENT_LIST -> navController?.navigate(HomeFragmentDirections.actionShowClientListFragment())
+                HomeEvents.PET_REGISTER -> navController?.navigate(HomeFragmentDirections.actionShowPetRegisterFragment())
                 else -> Toast.makeText(
                     context,
                     getString(R.string.in_process),
