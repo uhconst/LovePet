@@ -24,7 +24,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
-                app:title="@string/label_list_cliente" />
+                app:title="@string/label_client_list" />
 
         </com.google.android.material.appbar.AppBarLayout>
 

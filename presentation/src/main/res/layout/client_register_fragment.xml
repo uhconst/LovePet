@@ -24,7 +24,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
-                app:title="@string/label_cadastro_cliente" />
+                app:title="@string/label_client_register" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -45,13 +45,13 @@
 
                 <include
                     layout="@layout/section_layout"
-                    app:title="@{@string/label_dados_cliente}" />
+                    app:title="@{@string/label_client_info}" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/TextInputLayoutStyleDefault"
                     android:layout_width="match_parent"
                     android:layout_marginTop="@dimen/margin_padding_xtiny"
-                    android:hint="@string/label_nome">
+                    android:hint="@string/label_name">
 
                     <EditText
                         style="@style/EditTextStyleDefault"
@@ -65,7 +65,7 @@
                     style="@style/TextInputLayoutStyleDefault"
                     android:layout_width="match_parent"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:hint="@string/label_cpf">
+                    android:hint="@string/label_doc">
 
                     <EditText
                         style="@style/EditTextStyleDefault"
@@ -93,7 +93,7 @@
                     style="@style/TextInputLayoutStyleDefault"
                     android:layout_width="match_parent"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:hint="@string/label_telefone_1">
+                    android:hint="@string/label_phone_1">
 
                     <EditText
                         android:id="@+id/clientRegisterPhone1"
@@ -110,7 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_marginTop="@dimen/activity_vertical_margin"
                     android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:hint="@string/label_telefone_2">
+                    android:hint="@string/label_phone_2">
 
                     <EditText
                         android:id="@+id/clientRegisterPhone2"
@@ -124,7 +124,7 @@
 
                 <include
                     layout="@layout/section_layout"
-                    app:title="@{@string/label_dados_endereco}" />
+                    app:title="@{@string/label_address_info}" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -137,7 +137,7 @@
                         android:layout_width="0dp"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_weight="3"
-                        android:hint="@string/label_rua">
+                        android:hint="@string/label_street">
 
                         <EditText
                             style="@style/EditTextStyleDefault"
@@ -151,7 +151,7 @@
                         style="@style/TextInputLayoutStyleDefault"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:hint="@string/label_numero">
+                        android:hint="@string/label_number">
 
                         <EditText
                             style="@style/EditTextStyleDefault"
@@ -175,7 +175,7 @@
                         android:layout_width="0dp"
                         android:layout_marginEnd="@dimen/activity_horizontal_margin"
                         android:layout_weight="3"
-                        android:hint="@string/label_bairro">
+                        android:hint="@string/label_district">
 
                         <EditText
                             style="@style/EditTextStyleDefault"
@@ -189,7 +189,7 @@
                         style="@style/TextInputLayoutStyleDefault"
                         android:layout_width="0dp"
                         android:layout_weight="2"
-                        android:hint="@string/label_cep">
+                        android:hint="@string/label_postal_code">
 
                         <EditText
                             style="@style/EditTextStyleDefault"
