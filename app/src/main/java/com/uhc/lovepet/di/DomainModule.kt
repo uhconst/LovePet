@@ -1,21 +1,24 @@
 package com.uhc.lovepet.di
 
 import com.uhc.data.firebase.auth.FirebaseAuthServiceImpl
-import com.uhc.data.firebase.database.FirebaseDatabaseServiceImpl
-import com.uhc.data.repository.TransactionRepositoryImpl
+import com.uhc.data.repository.ClientRepositoryImpl
+import com.uhc.data.repository.PetRepositoryImpl
 import com.uhc.domain.firebase.auth.FirebaseAuthService
-import com.uhc.domain.firebase.database.FirebaseDatabaseService
-import com.uhc.domain.interactor.GetTransactionsUseCase
-import com.uhc.domain.repository.TransactionRepository
+import com.uhc.domain.interactor.ClientsUseCase
+import com.uhc.domain.interactor.PetsUseCase
+import com.uhc.domain.repository.ClientRepository
+import com.uhc.domain.repository.PetRepository
 import org.koin.dsl.module
 
 val domainModule = module {
 
-    single<TransactionRepository> { TransactionRepositoryImpl(get(), get()) }
+    single<ClientRepository> { ClientRepositoryImpl(get()) }
 
-    factory { GetTransactionsUseCase(get()) }
+    single<PetRepository> { PetRepositoryImpl(get()) }
 
-    single { FirebaseDatabaseServiceImpl(get()) as FirebaseDatabaseService }
+    factory { ClientsUseCase(get()) }
+
+    factory { PetsUseCase(get()) }
 
     single { FirebaseAuthServiceImpl(get()) as FirebaseAuthService }
 }

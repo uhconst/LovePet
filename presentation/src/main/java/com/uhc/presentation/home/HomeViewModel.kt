@@ -12,8 +12,12 @@ class HomeViewModel : BaseViewModel() {
         _events.postValue(HomeEvents.CLIENT_REGISTER)
     }
 
+    fun onClientListClick() {
+        _events.postValue(HomeEvents.CLIENT_LIST)
+    }
+
     fun onAnimalRegisterClick() {
-        _events.postValue(HomeEvents.ANIMAL_REGISTER)
+        _events.postValue(HomeEvents.PET_REGISTER)
     }
 
     fun onAppointmentRegisterClick() {
@@ -23,6 +27,7 @@ class HomeViewModel : BaseViewModel() {
 
 enum class HomeEvents {
     CLIENT_REGISTER,
-    ANIMAL_REGISTER,
+    CLIENT_LIST,
+    PET_REGISTER,
     APPOINTMENT_REGISTER
 }

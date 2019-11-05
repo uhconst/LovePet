@@ -39,6 +39,7 @@
 
     <!-- Card -->
     <dimen name="card_radius">@dimen/radius_normal</dimen>
+    <dimen name="card_elevation">2dp</dimen>
 
     <!-- Text Input Layout -->
     <dimen name="til_height_default">55dp</dimen>

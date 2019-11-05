@@ -56,9 +56,11 @@ dependencies {
     implementation dependencies.firebaseAuth
     implementation dependencies.firebaseDatabase
 
+    implementation dependencies.rxFirebaseCore
     implementation dependencies.rxFirebaseAuthKotlin
     implementation dependencies.rxFirebaseAuth
-    implementation dependencies.rxFirebaseCore
+    implementation dependencies.rxFirebaseDatabaseKotlin
+    implementation dependencies.rxFirebaseDatabase
 
     implementation dependencies.room
     implementation dependencies.rxRoom

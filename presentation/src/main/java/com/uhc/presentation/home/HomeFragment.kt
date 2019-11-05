@@ -7,6 +7,7 @@ import androidx.lifecycle.Observer
 import com.uhc.presentation.R
 import com.uhc.presentation.databinding.HomeFragmentBinding
 import com.uhc.presentation.ui.base.BaseFragment
+import kotlinx.android.synthetic.main.home_fragment.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 /**
@@ -25,6 +26,8 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>() {
         viewModel.events.observe(this, Observer { event ->
             when (event) {
                 HomeEvents.CLIENT_REGISTER -> navController?.navigate(HomeFragmentDirections.actionShowClientRegisterFragment())
+                HomeEvents.CLIENT_LIST -> navController?.navigate(HomeFragmentDirections.actionShowClientListFragment())
+                HomeEvents.PET_REGISTER -> navController?.navigate(HomeFragmentDirections.actionShowPetRegisterFragment())
                 else -> Toast.makeText(
                     context,
                     getString(R.string.in_process),
@@ -32,5 +35,7 @@ class HomeFragment : BaseFragment<HomeFragmentBinding>() {
                 ).show()
             }
         })
+
+        setupToobar(toolbar, false)
     }
 }

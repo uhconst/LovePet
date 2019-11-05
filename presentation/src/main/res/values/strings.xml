@@ -5,6 +5,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="in_process">In process…</string>
+    <string name="label_save">Salvar</string>
 
     <!-- LOGIN -->
     <string name="label_user">Usuário</string>
@@ -12,7 +13,25 @@
     <string name="label_login">Login</string>
     <string name="error_login">Erro ao realizar o login. Verefique os dados e tente novamente.</string>
 
+    <!-- HOME -->
+    <string name="label_home">Home</string>
+
     <!-- CLIENT REGISTER -->
+    <string name="label_client_register">Cadastro de Cliente</string>
+    <string name="label_client_list">Listagem de Cliente</string>
+    <string name="label_client_info">Dados cliente</string>
+    <string name="label_address_info">Dados endereço</string>
     <string name="label_name">Nome</string>
-    <string name="label_cpf">CPF</string>
+    <string name="label_doc">CPF</string>
+    <string name="label_email">Email</string>
+    <string name="label_phone_1">Telefone 1</string>
+    <string name="label_phone_2">Telefone 2</string>
+    <string name="label_street">Rua</string>
+    <string name="label_number">Numero</string>
+    <string name="label_district">Bairro</string>
+    <string name="label_postal_code">Cep</string>
+
+    <!-- PET REGISTER -->
+    <string name="label_pet_info">Dados pet</string>
+    <string name="label_pet_register">Cadastro do Pet</string>
 </resources>

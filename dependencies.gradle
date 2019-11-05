@@ -25,9 +25,10 @@ ext {
     firebaseVersion = "16.0.1"
 
     rxFirebaseAuthVersion = "16.1.0.0"
+    rxFirebaseDatabaseVersion = "16.0.3.0"
     rxFirebaseAuthCore = "16.0.5.0"
 
-    koinVersion = "2.0.0-rc-2"
+    koinVersion = "2.0.0"
 
     rxKotlinVersion = "2.3.0"
     rxAndroidVersion = "2.1.1"
@@ -36,6 +37,8 @@ ext {
     retrofitLogVersion = "3.8.1"
 
     picassoVersion = "2.71828"
+
+    stethoVersion = "1.5.1"
 
     junitVersion = "4.12"
     runnerVersion = "1.1.0"
@@ -64,7 +67,9 @@ ext {
             room                  : "androidx.room:room-runtime:$archVersion",
             rxRoom                : "androidx.room:room-rxjava2:$archVersion",
             roomCompiler          : "androidx.room:room-compiler:$archVersion",
-            picasso               : "com.squareup.picasso:picasso:$picassoVersion"
+            picasso               : "com.squareup.picasso:picasso:$picassoVersion",
+            stetho                :"com.facebook.stetho:stetho:$stethoVersion",
+            stethoOkHttp          :"com.facebook.stetho:stetho-okhttp3:$stethoVersion"
     ]
 
     appTestDependencies = [
@@ -116,22 +121,24 @@ ext {
     ]
 
     dataDependencies = [
-            kotlin                : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
-            firebaseCore          : "com.google.firebase:firebase-core:$firebaseVersion",
-            firebaseAuth          : "com.google.firebase:firebase-auth:$firebaseVersion",
-            firebaseDatabase      : "com.google.firebase:firebase-database:$firebaseVersion",
-            rxFirebaseAuthKotlin  : "com.androidhuman.rxfirebase2:firebase-auth-kotlin:$rxFirebaseAuthVersion",
-            rxFirebaseAuth        : "com.androidhuman.rxfirebase2:firebase-auth:$rxFirebaseAuthVersion",
-            rxFirebaseCore        : "com.androidhuman.rxfirebase2:firebase-core:$rxFirebaseAuthCore",
-            rxKotlin              : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
-            rxAndroid             : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
-            retrofit              : "com.squareup.retrofit2:retrofit:$retrofitVersion",
-            retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
-            retrofitRxJava2Adapter: "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
-            retrofitLog           : "com.squareup.okhttp3:logging-interceptor:$retrofitLogVersion",
-            room                  : "androidx.room:room-runtime:$archVersion",
-            rxRoom                : "androidx.room:room-rxjava2:$archVersion",
-            roomCompiler          : "androidx.room:room-compiler:$archVersion"
+            kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
+            firebaseCore            : "com.google.firebase:firebase-core:$firebaseVersion",
+            firebaseAuth            : "com.google.firebase:firebase-auth:$firebaseVersion",
+            firebaseDatabase        : "com.google.firebase:firebase-database:$firebaseVersion",
+            rxFirebaseAuthKotlin    : "com.androidhuman.rxfirebase2:firebase-auth-kotlin:$rxFirebaseAuthVersion",
+            rxFirebaseAuth          : "com.androidhuman.rxfirebase2:firebase-auth:$rxFirebaseAuthVersion",
+            rxFirebaseDatabaseKotlin: "com.androidhuman.rxfirebase2:firebase-database-kotlin:$rxFirebaseDatabaseVersion",
+            rxFirebaseDatabase      : "com.androidhuman.rxfirebase2:firebase-database:$rxFirebaseDatabaseVersion",
+            rxFirebaseCore          : "com.androidhuman.rxfirebase2:firebase-core:$rxFirebaseAuthCore",
+            rxKotlin                : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+            rxAndroid               : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            retrofit                : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitGsonConverter   : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+            retrofitRxJava2Adapter  : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+            retrofitLog             : "com.squareup.okhttp3:logging-interceptor:$retrofitLogVersion",
+            room                    : "androidx.room:room-runtime:$archVersion",
+            rxRoom                  : "androidx.room:room-rxjava2:$archVersion",
+            roomCompiler            : "androidx.room:room-compiler:$archVersion"
     ]
 
     dataTestDependencies = [

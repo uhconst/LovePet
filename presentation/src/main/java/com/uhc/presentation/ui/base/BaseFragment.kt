@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
@@ -31,5 +32,13 @@ abstract class BaseFragment<B : ViewDataBinding> : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, getLayoutRes(), container, false)
         return binding.root
+    }
+
+    protected fun setupToobar(toolbar: Toolbar, enableBackButton: Boolean = true) {
+        mainActivity.setupTollbar(toolbar, enableBackButton)
+    }
+
+    protected fun onBackPressed() {
+        mainActivity.onBackPressed()
     }
 }

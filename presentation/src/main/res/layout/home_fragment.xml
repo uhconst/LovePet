@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -8,38 +9,65 @@
             type="com.uhc.presentation.home.HomeViewModel" />
     </data>
 
-    <LinearLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="HOME"
-            android:textSize="50sp" />
-
-        <Button
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_margin="@dimen/activity_vertical_margin"
-            android:onClickListener="@{() -> viewModel.onClientRegisterClick()}"
-            android:text="Cadastro cliente"/>
+            android:layout_height="wrap_content">
 
-        <Button
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:title="@string/label_home" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_margin="@dimen/activity_vertical_margin"
-            android:onClickListener="@{() -> viewModel.onAnimalRegisterClick()}"
-            android:text="Cadastro animais"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_margin="@dimen/activity_vertical_margin"
-            android:onClickListener="@{() -> viewModel.onAppointmentRegisterClick()}"
-            android:text="Cadastro agendamento"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="HOME"
+                android:textSize="50sp" />
 
-    </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:onClickListener="@{() -> viewModel.onClientRegisterClick()}"
+                android:text="Cadastro cliente" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:onClickListener="@{() -> viewModel.onClientListClick()}"
+                android:text="Listagem cliente" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:onClickListener="@{() -> viewModel.onAnimalRegisterClick()}"
+                android:text="Cadastro animais" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:onClickListener="@{() -> viewModel.onAppointmentRegisterClick()}"
+                android:text="Cadastro agendamento" />
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

@@ -10,7 +10,9 @@ import com.uhc.presentation.utils.EventLiveData
 /**
  * Created by Constancio on 2019-05-04.
  */
-class LoginViewModel(val firebaseAuth: FirebaseAuthService) : BaseViewModel() {
+class LoginViewModel(
+    private val firebaseAuth: FirebaseAuthService
+) : BaseViewModel() {
 
     val username = MutableLiveData<String>()
     val password = MutableLiveData<String>()
